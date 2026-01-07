@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node
+node_modules/
+
+# ML / NLP models
+*.pt
+*.bin
+*.pkl
+*.h5
+*.safetensors
+
+# HuggingFace / Transformers
+*/model.safetensors
+*/tokenizer.json
+*/vocab.txt
+
+# TensorBoard / notebooks
+Notebooks/results/
+runs/
+
+# Env
+.env
+
+ai-engine/bert_fake_review_model/model.safetensors
+data
