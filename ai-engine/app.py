@@ -1,7 +1,7 @@
-from fastapi import FastAPI
-from pydantic import BaseModel
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
-import torch
+from fastapi import FastAPI # type: ignore
+from pydantic import BaseModel # type: ignore
+from transformers import AutoTokenizer, AutoModelForSequenceClassification # type: ignore
+import torch # type: ignore
 
 # ---------------- App ----------------
 app = FastAPI(
