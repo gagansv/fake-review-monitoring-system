@@ -60,12 +60,12 @@ const submitReview = async (req, res) => {
       const aiResponse = await axios.post('http://localhost:8000/analyze', {
         review: reviewText
       });
-      fakeProbability = Math.round(aiResponse.data.fake_probability * 100);
+      fakeProbability = Math.round(aiResponse.data.final_fake * 100);
       label = aiResponse.data.label === 'fake' ? 'FAKE' : 'REAL';
     } catch (error) {
       console.error('AI analysis failed, using fallback:', error.message);
       // Fallback to random if AI fails
-      fakeProbability = Math.random() * 100;
+      fakeProbability = Math.floor(Math.random() * 101); // 0-100 inclusive
       label = fakeProbability > 50 ? "FAKE" : "REAL";
     }
 
